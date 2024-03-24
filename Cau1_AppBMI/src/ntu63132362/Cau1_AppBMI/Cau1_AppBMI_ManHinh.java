@@ -110,6 +110,16 @@ public class Cau1_AppBMI_ManHinh extends JFrame {
 		bmiValue.setColumns(10);
 		
 		JButton calculate = new JButton("Calculate");
+		calculate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double iHeight = Double.parseDouble(heightValue.getText());
+				double iWeight = Double.parseDouble(weightValue.getText());
+				double iBMI = iWeight / (iHeight * iHeight);
+				
+				String cal_BMI = String.format("%.2f", iBMI);
+				bmiValue.setText(cal_BMI);
+			}
+		});
 		calculate.setFont(new Font("Lucida Grande", Font.BOLD, 13));
 		calculate.setBounds(29, 178, 117, 29);
 		panel.add(calculate);

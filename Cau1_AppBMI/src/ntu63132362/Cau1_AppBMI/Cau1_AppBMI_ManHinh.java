@@ -25,6 +25,9 @@ public class Cau1_AppBMI_ManHinh extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
 
 	/**
 	 * Launch the application.
@@ -55,21 +58,53 @@ public class Cau1_AppBMI_ManHinh extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(new Color(60, 179, 113));
+		panel_1.setBackground(new Color(255, 182, 193));
 		panel_1.setBounds(0, 0, 401, 91);
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("BODY MASS INDEX");
-		lblNewLabel.setForeground(new Color(0, 255, 127));
+		lblNewLabel.setForeground(new Color(0, 0, 0));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD, 34));
 		lblNewLabel.setBounds(41, 17, 322, 45);
 		panel_1.add(lblNewLabel);
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(255, 182, 193));
 		panel.setBounds(0, 103, 401, 213);
 		contentPane.add(panel);
 		panel.setLayout(null);
+		
+		JLabel lblNewLabel_1 = new JLabel("Height (m):");
+		lblNewLabel_1.setFont(new Font("Lucida Grande", Font.BOLD, 13));
+		lblNewLabel_1.setBounds(39, 31, 78, 16);
+		panel.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("Weight (kg):");
+		lblNewLabel_2.setFont(new Font("Lucida Grande", Font.BOLD, 13));
+		lblNewLabel_2.setBounds(39, 70, 89, 16);
+		panel.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("BMI =");
+		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_3.setFont(new Font("Lucida Grande", Font.BOLD, 30));
+		lblNewLabel_3.setBounds(39, 139, 139, 50);
+		panel.add(lblNewLabel_3);
+		
+		textField = new JTextField();
+		textField.setBounds(219, 26, 130, 26);
+		panel.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(219, 65, 130, 26);
+		panel.add(textField_1);
+		textField_1.setColumns(10);
+		
+		textField_2 = new JTextField();
+		textField_2.setBounds(219, 139, 130, 44);
+		panel.add(textField_2);
+		textField_2.setColumns(10);
 	}
 }

@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import Cau1_AppBMI;
+import Cau1_AppBMI.java;
 
 import java.awt.Color;
 import javax.swing.JTextField;
@@ -27,9 +27,9 @@ public class Cau1_AppBMI_ManHinh extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	private JTextField heightValue;
+	private JTextField weightValue;
+	private JTextField bmiValue;
 
 	/**
 	 * Launch the application.
@@ -94,45 +94,48 @@ public class Cau1_AppBMI_ManHinh extends JFrame {
 		lblNewLabel_3.setBounds(19, 92, 139, 50);
 		panel.add(lblNewLabel_3);
 		
-		textField = new JTextField();
-		textField.setBounds(219, 26, 130, 26);
-		panel.add(textField);
-		textField.setColumns(10);
+		heightValue = new JTextField();
+		heightValue.setBounds(219, 26, 130, 26);
+		panel.add(heightValue);
+		heightValue.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(219, 65, 130, 26);
-		panel.add(textField_1);
-		textField_1.setColumns(10);
+		weightValue = new JTextField();
+		weightValue.setBounds(219, 65, 130, 26);
+		panel.add(weightValue);
+		weightValue.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(219, 98, 130, 44);
-		panel.add(textField_2);
-		textField_2.setColumns(10);
+		bmiValue = new JTextField();
+		bmiValue.setBounds(219, 98, 130, 44);
+		panel.add(bmiValue);
+		bmiValue.setColumns(10);
 		
-		JButton btnNewButton = new JButton("Calculate");
-		btnNewButton.setFont(new Font("Lucida Grande", Font.BOLD, 13));
-		btnNewButton.setBounds(29, 178, 117, 29);
-		panel.add(btnNewButton);
+		JButton calculate = new JButton("Calculate");
+		calculate.setFont(new Font("Lucida Grande", Font.BOLD, 13));
+		calculate.setBounds(29, 178, 117, 29);
+		panel.add(calculate);
 		
-		JButton btnNewButton_1 = new JButton("Clear");
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton clear = new JButton("Clear");
+		clear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				jTextField.setText("");
+				heightValue.setText(null);
+				weightValue.setText(null);
+				bmiValue.setText(null);
+				
 			}
 		});
-		btnNewButton_1.setFont(new Font("Lucida Grande", Font.BOLD, 13));
-		btnNewButton_1.setBounds(158, 178, 117, 29);
-		panel.add(btnNewButton_1);
+		clear.setFont(new Font("Lucida Grande", Font.BOLD, 13));
+		clear.setBounds(158, 178, 117, 29);
+		panel.add(clear);
 		
-		JButton btnNewButton_2 = new JButton("Exit");
-		btnNewButton_2.addActionListener(new ActionListener() {
+		JButton exit = new JButton("Exit");
+		exit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
 		});
-		btnNewButton_2.setFont(new Font("Lucida Grande", Font.BOLD, 13));
-		btnNewButton_2.setBounds(274, 178, 117, 29);
-		panel.add(btnNewButton_2);
+		exit.setFont(new Font("Lucida Grande", Font.BOLD, 13));
+		exit.setBounds(274, 178, 117, 29);
+		panel.add(exit);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBackground(new Color(255, 182, 193));

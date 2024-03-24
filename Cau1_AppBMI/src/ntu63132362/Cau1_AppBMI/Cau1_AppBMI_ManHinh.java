@@ -7,7 +7,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import Cau1_AppBMI.java;
 
 import java.awt.Color;
 import javax.swing.JTextField;
@@ -109,6 +108,12 @@ public class Cau1_AppBMI_ManHinh extends JFrame {
 		panel.add(bmiValue);
 		bmiValue.setColumns(10);
 		
+		JLabel status = new JLabel("");
+		status.setFont(new Font("Lucida Grande", Font.BOLD, 13));
+		status.setHorizontalAlignment(SwingConstants.CENTER);
+		status.setBounds(204, 143, 145, 26);
+		panel.add(status);
+		
 		JButton calculate = new JButton("Calculate");
 		calculate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -118,6 +123,31 @@ public class Cau1_AppBMI_ManHinh extends JFrame {
 				
 				String cal_BMI = String.format("%.2f", iBMI);
 				bmiValue.setText(cal_BMI);
+				if (iBMI <= 18.5) 
+				{
+					bmiValue.setOpaque(true);
+					bmiValue.setBackground(Color.blue);
+					status.setForeground(Color.blue);
+					status.setText("UnderWeight");
+				}else if(iBMI <= 24.9) 
+				{
+					bmiValue.setOpaque(true);
+					bmiValue.setBackground(Color.green);
+					status.setForeground(Color.green);
+					status.setText("NormalWeight");
+				}else if(iBMI <= 29.9) 
+				{
+					bmiValue.setOpaque(true);
+					bmiValue.setBackground(Color.yellow);
+					status.setForeground(Color.yellow);
+					status.setText("OverWeight");
+				}else if(iBMI >= 30) 
+				{
+					bmiValue.setOpaque(true);
+					bmiValue.setBackground(Color.red);
+					status.setForeground(Color.red);
+					status.setText("Obese");
+				}
 			}
 		});
 		calculate.setFont(new Font("Lucida Grande", Font.BOLD, 13));
@@ -146,6 +176,8 @@ public class Cau1_AppBMI_ManHinh extends JFrame {
 		exit.setFont(new Font("Lucida Grande", Font.BOLD, 13));
 		exit.setBounds(274, 178, 117, 29);
 		panel.add(exit);
+		
+		
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBackground(new Color(255, 182, 193));

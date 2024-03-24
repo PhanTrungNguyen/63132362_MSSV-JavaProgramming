@@ -19,6 +19,7 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
 
 public class Cau1_AppBMI_ManHinh extends JFrame {
 
@@ -51,9 +52,24 @@ public class Cau1_AppBMI_ManHinh extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(60, 179, 113));
+		panel_1.setBounds(0, 0, 401, 91);
+		contentPane.add(panel_1);
+		panel_1.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("BODY MASS INDEX");
+		lblNewLabel.setForeground(new Color(0, 255, 127));
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD, 34));
+		lblNewLabel.setBounds(41, 17, 322, 45);
+		panel_1.add(lblNewLabel);
 		
 		JPanel panel = new JPanel();
+		panel.setBounds(0, 103, 401, 213);
 		contentPane.add(panel);
+		panel.setLayout(null);
 	}
-
 }
